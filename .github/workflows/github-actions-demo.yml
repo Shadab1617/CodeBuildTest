@@ -9,3 +9,6 @@ jobs:
 
     steps:
       - run: echo "Hello World!"
+      - run: for i in {1..1000}; do echo $i; done
+      - run: echo "Lets see if this gets printed!"
+
