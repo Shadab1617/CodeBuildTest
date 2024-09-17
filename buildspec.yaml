@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Preparing to execute the sleep script"
+  build:
+    commands:
+      - echo "Starting the sleep script"
+      - |
+        #!/bin/bash
+
+        # Initialize total sleep time
+        total_sleep_time=20
+
+        # Loop until total sleep time reaches or exceeds 60 seconds
+        while [ $total_sleep_time -lt 160 ]; do
+          echo $total_sleep_time
+          sleep $total_sleep_time
+          total_sleep_time=$((total_sleep_time + 15))
+          
+        done
+
+        echo "Total sleep time: $total_sleep_time seconds"
+  post_build:
+    commands:
+      - echo "Sleep script execution completed"
