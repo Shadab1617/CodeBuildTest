@@ -5,12 +5,8 @@ jobs:
     runs-on:
       - codebuild-GitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - fleet:Test
+      - buildspec-override:true
       
 
-    steps:
-      - run: echo "Hello World!"
-      - run: echo "Going to sleep mode"
-      - run: sleep 100
-      - run: for i in {1..1000}; do echo $i; done
-      - run: echo "Lets see if this gets printed!"
+
 
