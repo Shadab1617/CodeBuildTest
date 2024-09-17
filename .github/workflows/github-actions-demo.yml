@@ -1,0 +1,10 @@
+name: Hello World
+on: [push]
+jobs:
+  Hello-World-Job:
+    runs-on:
+      - codebuild-GitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
+      - fleet:Test
+
+    steps:
+      - run: echo "Hello World!"
