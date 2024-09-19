@@ -13,7 +13,7 @@ jobs:
       - name: Build
         uses: aws-actions/aws-codebuild-run-build@v1
         with:
-          project-name: "github-actions"
+          project-name: "GitHubActions"
           buildspec-override: |
             version: 0.2
             phases:
